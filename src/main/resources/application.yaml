@@ -1,0 +1,25 @@
+spring:
+  mvc:
+    dispatch-options-request: true
+  application:
+    name: rest-wsw
+  output:
+    ansi:
+      enabled: always
+  mustache:
+    check-template-location: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test_db
+    driver-class-name: org.postgresql.Driver
+    username: admin
+    password: admin
+  jpa:
+    open-in-view: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        default_schema: public
+    hibernate:
+      use-new-id-generator-mappings: false
+      ddl-auto: update
